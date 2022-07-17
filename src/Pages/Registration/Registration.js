@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Title, InputGroup, Input, Button } from './styleRegistration.js';
+import { Container, Title, InputGroup, Input, Button, Link } from './styleRegistration.js';
 import '../../Services/fireBase.js';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
@@ -54,6 +54,8 @@ function Registration() {
         <Button onClick={createUser}>
             Cadastrar
         </Button>
+
+        <Link href="/Login" >Já possui conta? Faça login!</Link>
 
     </Container>
   );

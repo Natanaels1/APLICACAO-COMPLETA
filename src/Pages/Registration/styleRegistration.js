@@ -1,8 +1,8 @@
 import Styled from 'styled-components';
 
 export const Container = Styled.div`
-  width: 500px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
@@ -11,7 +11,7 @@ export const Container = Styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6%;
+  margin-top: 5%;
 `;
 
 export const Title = Styled.h3`
@@ -28,8 +28,8 @@ export const InputGroup = Styled.div`
 `;
 
 export const Input = Styled.input`
-  width: 100%;
-  height: 40px;
+  width: 90%;
+  height: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
   color: #fff;
@@ -49,4 +49,16 @@ export const Button = Styled.button`
   display: flex;
   align-items: center;
   justify-content: center; 
+  &:hover {
+    background-color: #567ebb;
+    color: #fff;
+  }
+`;
+
+export const Link = Styled.a`
+  color: #567ebb;
+  text-decoration: none;
+  &:hover {
+    color:  #2b4c7e;
+  }
 `;

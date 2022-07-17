@@ -9,7 +9,7 @@ function RoutesApp() {
   return (
 
       <Routes>
-        <Route path="/Home" exact element={ <Home /> } />
+        <Route path="" exact element={ <Home /> } />
         <Route path="/Cadastro" exact element={ <Registration />} />
         <Route path="/Login" exact element={ <Login /> } />
       </Routes>

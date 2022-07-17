@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Title, InputGroup, Input, Button } from './styleLogin';
+import { Container, Title, InputGroup, Input, Button, Link } from './styleLogin';
 import '../../Services/fireBase';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -19,7 +19,7 @@ function Login() {
       localStorage.setItem('TOKEN', user.accessToken)
       localStorage.setItem('E-MAIL', user.email)
 
-      window.location.href = '/Home'
+      window.location.href = '/'
 
     })
     .catch((error) => {
@@ -42,27 +42,20 @@ function Login() {
     
     <Container>
         
-    <Title>Login</Title>
+      <Title>Login</Title>
 
-    <InputGroup>
-        <Input
-        value={emailUser}
-        placeholder="Digite seu e-mail"
-        onChange={e => setEmailUser(e.target.value)}
-        />
-        <Input
-        value={passwordUser}
-        type="password"
-        placeholder="Digite sua senha"
-        onChange={e => setPasswordUser(e.target.value)}
-        />
-    </InputGroup>
+      <InputGroup>
+          <Input value={emailUser} placeholder="Digite seu e-mail" onChange={e => setEmailUser(e.target.value)} />
+          <Input value={passwordUser} type="password" placeholder="Digite sua senha" onChange={e => setPasswordUser(e.target.value)} />
+      </InputGroup>
 
-    <Button onClick={loginUser}>
-        Entrar
-    </Button>
+      <Button onClick={loginUser}>
+          Entrar
+      </Button>
 
-</Container>
+      <Link href="/Cadastro" >Não possui cadastro? Clique aqui!</Link>
+
+    </Container>
 
   )
 
